@@ -22,3 +22,5 @@ This repository includes implementations of the following data structures:
 -Quick Sorter
 
 -Array Merger
+
+-Visiual Sorter
