@@ -6,7 +6,7 @@
 typedef struct
 {
     int capacity; // max number of items that can be stored
-    int* collection; // array of the integers that are currently stacked (can be any data type)
+    int* collection; // array of the integers that are currently stacked
     int size; // number of  items stored
 
 }Stack;
