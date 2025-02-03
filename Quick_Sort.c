@@ -1,5 +1,7 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /*
 
@@ -13,6 +15,37 @@ You may also put another value instead of the 0 in the parameters, it is a quest
 
 */
 
+
+void sort (int array[] , int start , int end);
+
+#define array_length 10
+
+int main(void)
+{
+    //initialize array
+    int array[array_length] = {3,6,4,9,1,6,8,2,4,5};
+
+    // print array before sorting
+    printf("Befor sorting:");
+    for (int i = 0; i < array_length; i++)
+    {
+        printf(" %d", array[i]);
+    }
+
+    //sort array
+    sort (array , 0 , array_length);
+
+    //print array after sorting
+    printf("\nAfter sorting:");
+    for (int i = 0; i < array_length; i++)
+    {
+        printf(" %d", array[i]);
+    }
+    printf("\n");
+    
+
+    return 0;
+}
 
 void sort (int array[] , int start , int end)
 {
