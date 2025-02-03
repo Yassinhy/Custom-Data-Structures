@@ -14,7 +14,11 @@ The purpose of this repository is to:
 ## Data Structures Implemented
 
 This repository includes implementations of the following data structures:
+
 -Stacks
+
 -Run-Length Encoder
+
 -Quick Sorter
+
 -Array Merger
