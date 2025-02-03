@@ -11,7 +11,8 @@ typedef struct
 // the prototypes:
 Set* makeset ();
 bool is_empty (Set* Set);
-void insert (Set* set, int member);
+bool insert (Set* set, int member);
+void destroy_set(Set* set);
 
 // Example usage:
 int main(void)
@@ -62,10 +63,8 @@ int main(void)
         printf("Inserted 10 into the set.\n");
     }
 
-    // Free the set (not implemented in the provided code)
-    // You should add a function to free the memory allocated for the set
-    free(mySet->members);
-    free(mySet);
+    // Free the set 
+    destroy_set(mySet);
     printf("Set destroyed successfully.\n");
 
     return 0;
@@ -110,4 +109,10 @@ bool insert (Set* set, int member)
     set->members[set->length] = member; 
     set->length = set->length + 1;
     return false;
+}
+
+void destroy_set(Set* set)
+{
+    free(set->members);
+    free(set);
 }
